@@ -51,7 +51,7 @@ class AudioRecord():
 
 def recog(buffer):
     start=time.time()
-    server = "http://192.168.206.132:5000/recognize"
+    server = "http://192.168.206.132:5000/recognize" ###这里需要改成你运行MASR的IP。
     buffile=BytesIO(buffer).getvalue()
     files = {"file": buffile}
     r = requests.post(server, files=files)
